@@ -1,0 +1,34 @@
+employee_id,full_name,email,company,department,job_title,nationality,work_location,visa_type,profile_status,case_status,profile_completion_pct,filed_at,granted_at,expires_at,passport_expiry,assigned_advisor,last_updated
+EMP-1001,"Chen, Wei",wei.chen@example.com,Kowhai Robotics,Engineering,Staff Software Engineer,China,"San Francisco, USA",H-1B,Completed,Approved,100,12/08/2025,01/10/2025,30/09/2028,14/02/2029,J. Patel,10/06/2026
+EMP-1002,Priya Nair,priya.nair@example.com,Kowhai Robotics,Data,Senior Data Scientist,India,"Auckland, New Zealand",AEWV,In Progress,Not Filed,65,,,,01/05/2030,J. Patel,14/06/2026
+EMP-1003,Lucas Müller,lucas.muller@example.com,Kowhai Robotics,Engineering,Engineering Manager,Germany,"San Francisco, USA",O-1A,Completed,RFE Issued,100,04/22/2026,,31/12/2026,19/08/2027,A. Singh,15/06/2026
+EMP-1004,Sofia Rossi,sofia.rossi@example.com,Tasman BioHealth,Research,Principal Scientist,Italy,"Sydney, Australia",482,Completed,Filed,100,01/03/2026,,,22/01/2028,M. Lee,09/06/2026
+EMP-1005,Daniel Okafor,daniel.okafor@example.com,Tasman BioHealth,Engineering,DevOps Engineer,Nigeria,"Melbourne, Australia",482,In Progress,Not Filed,40,,,,30/11/2027,M. Lee,13/06/2026
+EMP-1006,Yuki Tanaka,,Vantage Cloud,Product,Product Manager,Japan,"Austin, USA",H-1B,Completed,Approved,100,01/03/2024,15/06/2024,28/06/2026,03/03/2028,A. Singh,20/05/2026
+EMP-1007,"O'Brien, Sean",sean.obrien@example.com,Vantage Cloud,Sales,Account Executive,Ireland,"New York, USA",H-1B,Completed,Approved,100,10/01/2025,02/04/2025,01/04/2027,30/06/2031,A. Singh,01/06/2026
+EMP-1008,Mateo García,mateo.garcia@example.com,Southern Cross Logistics,Operations,Operations Lead,Spain,"Auckland, New Zealand",AEWV,Completed,Approved,100,15/09/2025,20/11/2025,01/12/2025,09/09/2029,J. Patel,01/02/2026
+EMP-1009,Ananya Reddy,ananya.reddy@example.com,Southern Cross Logistics,Finance,Financial Analyst,India,"Sydney, Australia",186,In Progress,Not Filed,55,,,,12/12/2028,M. Lee,12/06/2026
+EMP-1010,Carlos Mendoza,carlos.mendoza@example.com,Kowhai Robotics,Engineering,Senior Software Engineer,Mexico,"San Francisco, USA",TN,Completed,Approved,100,01/06/2025,20/06/2025,10/07/2026,05/05/2027,A. Singh,08/06/2026
+EMP-1011,Fatima Al-Sayed,fatima.alsayed@example.com,Tasman BioHealth,Research,Research Fellow,Egypt,"Boston, USA",O-1A,Completed,Filed,100,06/07/2026,,,15/01/2030,A. Singh,11/06/2026
+EMP-1012,Liam Thompson,liam.thompson@example.com,Vantage Cloud,Engineering,Frontend Engineer,United Kingdom,"Melbourne, Australia",482,in progress,Not Filed,30,,,,07/07/2029,M. Lee,15/06/2026
+EMP-1013,Hannah Kim,hannah.kim@example.com,Vantage Cloud,Design,Senior Designer,South Korea,"Austin, USA",H-1B,Completed,Denied,100,15/02/2025,30/05/2025,,08/08/2028,A. Singh,03/06/2026
+EMP-1014,Ahmed Hassan,ahmed.hassan@example.com,Southern Cross Logistics,Engineering,Backend Engineer,Pakistan,"Auckland, New Zealand",AEWV,Completed,Approved,100,05/10/2025,10/01/2026,09/01/2027,04/04/2028,J. Patel,28/05/2026
+EMP-1015,Isabella Santos,isabella.santos@example.com,Kowhai Robotics,Marketing,Marketing Lead,Brazil,"San Francisco, US",O-1B,In Progress,Not Filed,70,,,,01/12/2027,A. Singh,14/06/2026
+EMP-1016,Raj Patel,raj.patel@example.com,Tasman BioHealth,Data,ML Engineer,India,"Sydney, Australia",482,Completed,RFE Issued,100,20/02/2026,,,03/03/2029,M. Lee,15/06/2026
+EMP-1017,Mei Lin,mei.lin@example.com,Southern Cross Logistics,Operations,Supply Chain Analyst,China,"Melbourne, Australia",494,Not Started,,,,,,10/10/2030,,05/06/2026
+EMP-1018,Tomáš Novák,tomas.novak@example.com,Vantage Cloud,Engineering,Staff Engineer,Czech Republic,"New York, USA",O-1A,Completed,Approved,100,01/11/2024,15/02/2025,14/02/2027,01/09/2028,A. Singh,30/04/2026
+EMP-1019,Grace Wong,grace.wong@example.com,Kowhai Robotics,Finance,Controller,Malaysia,"Auckland, New Zealand",AEWV,COMPLETED ,Approved,100,07/07/2025,09/09/2025,20/08/2026,15/03/2027,J. Patel,02/06/2026
+EMP-1020,Omar Farah,omar.farah@example.com,Tasman BioHealth,Engineering,Site Reliability Engineer,Somalia,"Boston, USA",H-1B,In Progress,Not Filed,25,,,,06/06/2029,A. Singh,13/06/2026
+EMP-1021,Elena Petrova,elena.petrova@example.com,Vantage Cloud,Product,Product Designer,Russia,"Sydney, Australia",482,Completed,Withdrawn,100,01/12/2025,15/03/2026,,11/11/2028,M. Lee,20/03/2026
+EMP-1022,"Nguyen, Minh",minh.nguyen@example.com,Southern Cross Logistics,Engineering,Senior Backend Engineer,Vietnam,"Auckland, New Zealand",AEWV,In Progress,Not Filed,80,,,,20/01/2031,J. Patel,14/06/2026
+EMP-1023,Aisha Mohammed,aisha.mohammed@example.com,Kowhai Robotics,Data,Analytics Lead,UAE,"San Francisco, USA",O1A,Completed,Filed,100,05/04/2026,,,08/08/2029,A. Singh,10/06/2026
+EMP-1024,Diego Fernández,diego.fernandez@example.com,Vantage Cloud,Sales,Sales Engineer,Argentina,"Austin, USA",H-1B,completed,Approved,90,10/03/2025,01/06/2025,30/05/2026,10/10/2027,A. Singh,15/05/2026
+EMP-1025,Sara Johansson,sara.johansson@example.com,Tasman BioHealth,Research,Senior Researcher,Sweden,"Melbourne, Australia",186,Completed,Approved,100,01/08/2024,01/12/2024,30/11/2027,02/02/2030,M. Lee,10/01/2026
+EMP-1026,Kwame Mensah,kwame.mensah@example.com,Southern Cross Logistics,Operations,Logistics Coordinator,Ghana,"Auckland, New Zealand",AEWV,Not Started,,0,,,,07/07/2028,,06/06/2026
+EMP-1027,Lucia Romano,lucia.romano@example.com,Kowhai Robotics,Engineering,Frontend Lead,Italy,"San Francisco, USA",O-1A,Completed,In Review,100,,,,12/12/2029,A. Singh,15/06/2026
+EMP-1028,"Chen, Wei",wei.chen@example.com,Kowhai Robotics,Engineering,Staff Software Engineer,China,"San Francisco, USA",H-1B,In Progress,Not Filed,50,,,,14/02/2029,J. Patel,01/03/2026
+EMP-1029,Yusuf Demir,yusuf.demir@example.com,Vantage Cloud,Engineering,Platform Engineer,Turkey,"New York, USA",H-1B,Completed,Approved,100,05/05/2025,08/08/2025,05/09/2026,31/12/2027,A. Singh,04/06/2026
+EMP-1030,Amara Okeke,amara.okeke@example.com,Tasman BioHealth,Data,Data Engineer,Nigeria,"Sydney, Australia",494,In Progress,Not Filed,15,,,,06/06/2030,M. Lee,12/06/2026
+EMP-1031,Jin Park,jin.park@example.com,Southern Cross Logistics,Finance,Senior Accountant,South Korea,"Auckland, New Zealand",AEWV,Completed,Approved,100,11/11/2025,02/02/2026,01/02/2027,10/10/2028,J. Patel,30/05/2026
+EMP-1032,Natasha Ivanova,natasha.ivanova@example.com,Kowhai Robotics,Product,Senior Product Manager,Russia,"San Francisco, USA",O-1A,Completed,Filed,100,14/05/2026,,,04/04/2029,A. Singh,09/06/2026
+,Pieter de Vries,pieter.devries@example.com,Vantage Cloud,Engineering,Junior Engineer,Netherlands,"Melbourne, Australia",482,Not Started,,,,,,03/03/2031,,07/06/2026

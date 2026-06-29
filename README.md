@@ -1,50 +1,94 @@
-# Engineering Exercise — Employee Visa Tracking
+# Concord Engineering Exercise — Visa Tracking
 
-## Context
+## Scenario
 
-Concord is a platform for managing visas and global mobility. Two groups use it:
+Concord helps organisations manage visas and global mobility. Several parties rely
+on the platform: **advisors** who move each case forward, the **client
+organisations** (e.g. an HR team) whose people are being sponsored, and the
+**beneficiaries** — the employees themselves — who want to know where their case
+stands.
 
-- **Employees** complete a profile with the information needed to prepare a visa filing.
-- **HR managers** track the visa status of the employees at their company — who's on top of things, who's stuck, and whose work authorisation is about to lapse.
+You've been given a small, **already-running** dashboard (in `app/`), thrown
+together on top of a messy employee export (`concord_employees.csv`). It runs, but
+it was built in a hurry — **treat the implementation as rough and provisional.**
+Your job isn't to rebuild or polish it; it's to look at it with us and talk through
+where you'd take it.
 
-You've been handed a CSV (`concord_employees.csv`) containing employee data exported from an upstream system. It is real-world-shaped: it spans multiple companies and several visa types across different countries, and it is not perfectly clean.
+## What the session is
 
-## Your task
+**An in-person, collaborative session**. Together we'll:
 
-1. **Design a data model** for this domain.
-2. **Build a read-only dashboard** that lets an HR manager track the employees at their company.
+- **Read it together** — open the app and the code and tell us what you notice.
+- **Work the problems below** — decide what matters and sketch what you'd build.
+- **Extend it together** — pair with us on a slice or two.
 
-That's the whole brief. How you interpret "track" — what an HR manager most needs to see, and what you'd surface first — is part of what we're looking at.
+**You don't have to fix everything you spot.** For an existing problem in the code
+or data, dropping a `// TODO:` that names it — and, ideally, how you'd approach it
+— is enough. Focus your effort on your contributions. 
 
-## Scope & constraints
+**AI tools (Claude, Copilot, Cursor, etc.) and the internet are encouraged.** We use
+them daily — please narrate how you use them and how you check their output.
 
-This is a **time-boxed: aim for ~3 hours.** We are not expecting a production system, and we'd rather see a smaller thing done thoughtfully than a large thing done sloppily.
+## Problem statements
 
-To keep the focus on data modelling and the dashboard, you can **skip**:
+These are the kinds of needs the product exists to serve. We'll use them to steer
+the conversation — pick what you'd take on, and tell us why:
 
-- **Authentication / authorisation.** Assume the HR manager is already signed in. (You may still want to *model* who-sees-what — that's your call.)
-- **Data creation / editing.** Reading and viewing the data is enough; you don't need create/update/delete flows.
-- **Pixel-perfect UI.** Clear and usable beats polished.
+- **Advisors need to prioritise their work** — who needs attention first, who's at
+  risk, what's blocked or waiting on someone.
+- **Clients and beneficiaries need to see how their case(s) are progressing** —
+  where a case is, what happens next, what's overdue.
+- **Everyone needs to trust what they're looking at** — the export is messy, so
+  what would it take to turn it into data you'd model and rely on?
 
-**Stack is your choice** — use whatever lets you move fastest and show your strengths.
+You won't get to all of these. Choose, prioritise, and be ready to say what you'd
+deliberately leave out.
 
-**Use AI tools freely** (Claude, Copilot, Cursor, etc.). We use them daily and want to see how you work with them.
+## What we ARE looking at
+
+- How you **communicate** your thinking.
+- How you **prioritise** and reason about messy, real-world data.
+- How you **work with us** — collaboration, and how you react when something new
+  lands mid-conversation.
+- The **point of view** you bring or form about what these users most need.
+- How you **model the domain** — including data that doesn't fit a single tidy shape.
+
+## What we are NOT looking at (please don't spend time on these)
+
+- Authentication.
+- Pixel-perfect UI.
+- Completeness — you will not "finish", and that's fine.
+- Visa-domain trivia — you don't need to be an immigration expert.
+- Knowing our exact stack, or any particular library or technique off the top of
+  your head — reasoning aloud about how you'd approach something is the point.
 
 ## What to submit
 
 - The code, runnable from a short README (a couple of commands to get it going is fine).
 - A brief **notes file** (a page is plenty) covering:
-  - **Assumptions** you made about the domain and the data.
-  - **Questions** you'd have asked us if this were a live project — and what you assumed in their absence so you could keep moving.
-  - **Trade-offs and shortcuts** — what you deliberately cut, what you'd do with more time, and why.
+- **Assumptions** you made about the domain and the data.
+- **Questions** you'd have asked us if this were a live project — and what you assumed in their absence so you could keep moving.
+- **Trade-offs and shortcuts** — what you deliberately cut, what you'd do with more time, and why.
 
-## What we're looking at
+> [!NOTE]
+> There's no single right answer, and we don't expect you to handle all of it. Decide what's worth your time, do a satisficing job of it, and tell us about the rest.
 
-We care more about judgment than completeness. In particular:
+## Setup
 
-- How you **model the domain** — including data that doesn't fit a single tidy shape.
-- How you handle **messy and incomplete data** without grinding to a halt.
-- How you **prioritise**: what you decided matters for an HR manager, and what you chose to leave out.
-- How clearly you **communicate** your assumptions and trade-offs.
+From this directory, two commands:
 
-There's no single right answer, and we don't expect you to handle everything in the data. Decide what's worth your time, do that well, and tell us about the rest.
+```
+cd app && bun install
+bun run dev
+```
+
+Then open the printed `localhost` URL. (If you don't have [bun](https://bun.sh),
+`npm install && npm run dev` inside `app/` works too.)
+
+## Stack note
+
+The app is **React + TypeScript + Vite** — a deliberately boring, widely-readable
+stack chosen so we can comfortably work in it together. Most of what we pay
+attention to (reading the code, prioritising, sketching a data model, directing AI)
+doesn't require fluent stack code, and AI is available for the part that does — so
+don't worry if React/TS isn't your daily driver.

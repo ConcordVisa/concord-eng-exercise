@@ -1,0 +1,34 @@
+{
+  // Linter/formatter config (Biome).
+  // Boilerplate — you shouldn't need to touch this; it just keeps style consistent.
+  // Run `bun run check` / `bun run fix`.
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/biome/core", "ultracite/biome/react"],
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "linter": {
+    "rules": {
+      "style": {
+        "useConsistentTypeDefinitions": {
+          "options": {
+            "style": "type"
+          },
+          "level": "error"
+        },
+        // `noNestedTernary` is not recommended by Biome. Readability can be judged in PR Review.
+        "noNestedTernary": "off"
+      },
+      "complexity": {
+        // `noVoid` is not recommended by biome.
+        // Using void to highlight an unawaited promise is good practice.
+        "noVoid": "off"
+      },
+      "correctness": {
+        // We don't use file extensions in imports
+        "useImportExtensions": "off"
+      }
+    }
+  }
+}

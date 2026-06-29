@@ -1,0 +1,35 @@
+{
+  // TypeScript config. Boilerplate — you shouldn't need to change this (unless you wish to).
+  "$schema": "https://json.schemastore.org/tsconfig",
+  // Mirrors concord-next's apps/web tsconfig.
+  // The monorepo extends a shared @repo/typescript-config base + react-library;
+  // that package isn't available here, so its options are inlined below.
+  "compilerOptions": {
+    // --- shared base ---
+    "declaration": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": false,
+    "isolatedModules": true,
+    "lib": ["es2022", "DOM", "DOM.Iterable"],
+    "moduleDetection": "force",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "target": "ES2022",
+    // --- react-library ---
+    "jsx": "react-jsx",
+    // --- apps/web overrides ---
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "types": ["node"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "vite-env.d.ts"],
+  "exclude": ["node_modules"]
+}
