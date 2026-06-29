@@ -8,11 +8,16 @@ organisations** (e.g. an HR team) whose people are being sponsored, and the
 **beneficiaries** — the employees themselves — who want to know where their case
 stands.
 
-You've been given a small, **already-running** dashboard (in `app/`), thrown
-together on top of a messy employee export (`concord_employees.csv`). It runs, but
-it was built in a hurry — **treat the implementation as rough and provisional.**
-Your job isn't to rebuild or polish it; it's to look at it with us and talk through
-where you'd take it.
+You've been given a small, **already-running** dashboard, thrown together on top of
+a messy employee export (`public/concord_employees.csv`). It runs, but it was built
+in a hurry — **treat the implementation as rough and provisional.** Your job isn't
+to rebuild or polish it; it's to look at it with us and talk through where you'd
+take it.
+
+> **It's a scaffold, not a product.** It dumps a few raw columns into a table with a
+> hand-rolled status badge and one design-system `Card` — there's a design system
+> behind it, but no design thought in front of it yet. Deciding what an HR manager
+> needs is the exercise.
 
 ## What the session is
 
@@ -24,7 +29,7 @@ where you'd take it.
 
 **You don't have to fix everything you spot.** For an existing problem in the code
 or data, dropping a `// TODO:` that names it — and, ideally, how you'd approach it
-— is enough. Focus your effort on your contributions. 
+— is enough. Focus your effort on your contributions.
 
 **AI tools (Claude, Copilot, Cursor, etc.) and the internet are encouraged.** We use
 them daily — please narrate how you use them and how you check their output.
@@ -66,29 +71,59 @@ deliberately leave out.
 
 - The code, runnable from a short README (a couple of commands to get it going is fine).
 - A brief **notes file** (a page is plenty) covering:
-- **Assumptions** you made about the domain and the data.
-- **Questions** you'd have asked us if this were a live project — and what you assumed in their absence so you could keep moving.
-- **Trade-offs and shortcuts** — what you deliberately cut, what you'd do with more time, and why.
+  - **Assumptions** you made about the domain and the data.
+  - **Questions** you'd have asked us if this were a live project — and what you assumed in their absence so you could keep moving.
+  - **Trade-offs and shortcuts** — what you deliberately cut, what you'd do with more time, and why.
 
 > [!NOTE]
 > There's no single right answer, and we don't expect you to handle all of it. Decide what's worth your time, do a satisficing job of it, and tell us about the rest.
 
-## Setup
+## Running it
 
-From this directory, two commands:
+Two commands:
 
-```
-cd app && bun install
+```bash
+bun install
 bun run dev
 ```
 
-Then open the printed `localhost` URL. (If you don't have [bun](https://bun.sh),
-`npm install && npm run dev` inside `app/` works too.)
+Then open the printed `localhost` URL. (No bun? `npm install && npm run dev` works too.)
 
-## Stack note
+| Command | What it does |
+|---|---|
+| `bun run dev` | Vite dev server with hot reload. |
+| `bun run build` | Type-check (`tsc`) + production build into `dist/`. |
+| `bun run preview` | Serve the production build. |
+| `bun run check` | Lint + format check (Biome via [ultracite](https://github.com/haydenbleasel/ultracite)). |
+| `bun run fix` | Auto-fix lint/format issues. |
 
-The app is **React + TypeScript + Vite** — a deliberately boring, widely-readable
-stack chosen so we can comfortably work in it together. Most of what we pay
-attention to (reading the code, prioritising, sketching a data model, directing AI)
-doesn't require fluent stack code, and AI is available for the part that does — so
-don't worry if React/TS isn't your daily driver.
+## Where to work
+
+The files under `src/` (and the CSV) are the exercise — that's where your attention
+should go:
+
+```
+src/
+  main.tsx               # entry point
+  app.tsx                # the scaffold page (table + status badge + one Card)
+  components/card.tsx    # design-system sample component
+  data/load-employees.ts # reads the CSV into rows (every column, raw)
+public/
+  concord_employees.csv  # the export the dashboard renders
+```
+
+Everything else (`index.html`, `vite.config.ts`, `tsconfig.json`, `biome.jsonc`,
+`vite-env.d.ts`, `package.json`, `bun.lock`, `.gitignore`, `.editorconfig`) is
+boilerplate; each carries a one-line header saying so. **You're not expected to find
+problems hidden in the config** — if you do spot something genuinely off, great, but
+don't go hunting there. Adding a dependency is fine if it helps — `bun add <pkg>` —
+just be ready to say why.
+
+## Stack
+
+**React + TypeScript + Vite** — a deliberately boring, widely-readable stack so we
+can work in it together. Most of what we pay attention to (reading the code,
+prioritising, sketching a data model, directing AI) doesn't need fluent stack code,
+and AI is available for the part that does — so don't worry if React/TS isn't your
+daily driver. Linting/formatting is Biome via ultracite (`biome.jsonc`); TypeScript
+runs in `Bundler` mode with an `@/` → `src/` alias.
